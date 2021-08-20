@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Cigna1TestSuit" parallel="none" thread-count="2">
+    <!--    parallel="none"  Working Fine-->
+    <!--    parallel="classes"  Working Fine-->
+    <!--    parallel="tests"  Working Fine but have issue-->
+
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="cloudEnvName" value="browserStack"/>
+    <parameter name="OS" value="windows"/>
+    <parameter name="os_version" value="10"/>
+    <!--    <parameter name="OS" value="OS X"/>-->
+    <!--    <parameter name="os_version" value="Sierra"/>-->
+<!--    <parameter name="browserName" value="chrome"/>-->
+<!--    <parameter name="browserVersion" value="89"/>-->
+    <!--        <parameter name="browserName" value="firefox"/>-->
+    <!--        <parameter name="browserVersion" value="76.0"/>-->
+    <parameter name="url" value="https://www.cigna.com/"/>
+
+
+    <test name="Cigna1 Automation Test Script using chrome">
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value="89"/>
+
+    <classes>
+
+        <class name="Cigna1HomePageTest.CignaTestDriver">
+
+        <methods>
+            <!--               Test case include or exclude-->
+            <!--               <exclude name="testSearchbox"></exclude>-->
+            <!--               <include name="testLogin"></include>-->
+        </methods>
+
+    </class>
+
+    <!--        Add more Test classes-->
+
+</classes>
+</test>
+
+
+<!--    <test name="Amazon Automation Test Script using Firefox">-->
+<!--        <parameter name="browserName" value="firefox"/>-->
+<!--        <parameter name="browserVersion" value="86.0"/>-->
+<!--        <classes>-->
+<!--            <class name="homepagetest.HomePageTest">-->
+<!--                <methods>-->
+<!--                    &lt;!&ndash;               Test case include or exclude&ndash;&gt;-->
+<!--                    &lt;!&ndash;               <exclude name="testSearchbox"></exclude>&ndash;&gt;-->
+<!--                    &lt;!&ndash;               <include name="testLogin"></include>&ndash;&gt;-->
+<!--                </methods>-->
+
+<!--            </class>-->
+
+
+<!--        </classes>-->
+<!--    </test>-->
+
+
+</suite>
+
+
+
+
+

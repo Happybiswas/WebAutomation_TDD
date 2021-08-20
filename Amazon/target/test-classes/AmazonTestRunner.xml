@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AmazonTestSuite" parallel="none" thread-count="1" >
+<!-- thread-count="2" parallel="true"-->
+
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="cloudEnvName" value="browserStack"/>
+    <parameter name="OS" value="windows"/>
+    <parameter name="os_version" value="10"/>
+    <parameter name="url" value="https://www.amazon.com/"/>
+    <parameter name ="FILE_NAME" value="../WebAutomationFrameworkTDD_Team1/Amazon/TestData/testdata.xlsx"/>
+
+
+
+    <test name="Amazon Automation Test Script using Chrome">
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value="91"/>
+
+        <classes>
+    <!--        Calling Test Class -->
+            <class name="homepagetest.HomePageTest">
+                <methods>
+    <!--                Test case include or exclude -->
+    <!--                <exclude name="testSearchBox"></exclude>-->
+    <!--                <include name="testLogin"></include>-->
+                </methods>
+    <!--            Add more test classes-->
+            </class>
+        </classes>
+    </test>
+
+    <test name="Amazon Automation Test Script Firefox" enabled="false">
+        <parameter name="browserName" value="firefox"/>
+        <parameter name="browserVersion" value="86.0"/>
+
+        <classes>
+            <!--        Calling Test Class -->
+            <class name="homepagetest.HomePageTest">
+
+                <methods>
+                    <!--                Test case include or exclude -->
+                    <!--                <exclude name="testSearchBox"></exclude>-->
+                    <!--                <include name="testLogin"></include>-->
+                </methods>
+
+                <!--            Add more test classes-->
+
+            </class>
+
+        </classes>
+    </test>
+
+
+</suite>
